@@ -1,0 +1,102 @@
+body {
+    overflow: hidden;
+}
+
+/* Sembunyikan elemen yang tidak diperlukan */
+yt-live-chat-mode-change-message-renderer,
+yt-live-chat-viewer-engagement-message-renderer,
+yt-live-chat-restricted-participation-renderer,
+yt-live-chat-banner-manager,
+yt-live-chat-action-panel-renderer,
+yt-live-chat-renderer #action-panel,
+yt-reaction-control-panel-overlay,
+yt-reaction-control-panel-overlay-view-model,
+yt-reaction-control-panel-view-model,
+yt-live-chat-viewer-engagement-message-renderer,
+yt-live-chat-ticker-renderer,
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-legacy-paid-message-renderer[is-deleted],
+yt-live-chat-header-renderer,
+yt-live-chat-moderation-message-renderer,
+yt-live-chat-message-input-renderer {
+    display: none !important;
+}
+
+/* Mengatur background chat */
+yt-live-chat-renderer,
+yt-live-chat-item-list-renderer {
+    background: transparent !important;
+}
+
+/* Desain pesan chat */
+yt-live-chat-text-message-renderer {
+    padding: 12px;
+    background: #17202a !important;
+    border-radius: 8px !important;
+    margin-bottom: 18px !important;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 1);
+}
+
+/* Perbesar font pesan chat */
+yt-live-chat-text-message-renderer #message {
+    font-size: 20px !important;
+}
+
+/* Perbesar font nama pengguna */
+yt-live-chat-text-message-renderer #author-name {
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+/* Tambahkan ":" setelah nama pengguna */
+yt-live-chat-text-message-renderer #author-name::after {
+    content: " :";
+    font-weight: bold !important;
+    color: #fff !important;
+    margin-left: 3px !important;
+}
+
+/* Warna khusus berdasarkan status pengguna */
+/* Pemilik channel */
+yt-live-chat-text-message-renderer[author-type="owner"] #author-name {
+    color: red !important;
+}
+
+/* Moderator */
+yt-live-chat-text-message-renderer[author-type="moderator"] #author-name {
+    color: blue !important;
+}
+
+/* Member (Membership) */
+yt-live-chat-text-message-renderer[author-type="member"] #author-name {
+    color: #239b56 !important;
+}
+
+/* Pengguna biasa */
+yt-live-chat-text-message-renderer #author-name {
+    color: #ff9c33 !important;
+}
+
+/* Sembunyikan avatar pengguna */
+yt-live-chat-text-message-renderer #author-photo,
+yt-live-chat-paid-message-renderer #author-photo,
+yt-live-chat-legacy-paid-message-renderer #author-photo {
+    display: none !important;
+}
+
+/* Hilangkan scroll */
+yt-live-chat-item-list-renderer #items,
+yt-live-chat-item-list-renderer #item-scroller {
+    overflow: hidden !important;
+}
+
+/* Menghilangkan background nama pengguna */
+yt-live-chat-author-chip #author-name {
+    background-color: transparent !important;
+}
+
+/* Hilangkan underline pada link */
+yt-live-chat-text-message-renderer a,
+yt-live-chat-legacy-paid-message-renderer a {
+    text-decoration: none !important;
+}
